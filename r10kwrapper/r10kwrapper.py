@@ -117,7 +117,7 @@ def execute_r10k(puppetfile=None,modules_directory=None,action="check",r10k_appe
             r10k_append_flags=r10k_append_flags)
 
     command = str(r10k_binary) + " " + str(r10k_module) + " " + str(action) + " " + str(r10k_append_flags)
-    env_vars = { 'PATH' : '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
+    env_vars = { 'PATH' : '/usr/local/sbin:/usr/local/bin:/opt/puppetlabs/bin:/usr/sbin:/usr/bin:/sbin:/bin',
                  'PUPPETFILE': puppetfile, 'PUPPETFILE_DIR': modules_directory}
 
     logging.debug(ansi.brown + "ENV_VARS: " + str(env_vars) + ansi.clear)
